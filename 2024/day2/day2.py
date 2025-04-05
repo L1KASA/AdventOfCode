@@ -1,7 +1,7 @@
 list_1 = list()
 with open('input', 'r') as file:
-   while line := file.readline().split( ):
-       list_1.append([int(x) for x in line])
+    list_1 = [[int(x) for x in line.split()] for line in file]
+   
 
 def is_safe(row):
     decrease = 0
