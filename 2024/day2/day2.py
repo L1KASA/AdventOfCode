@@ -1,6 +1,8 @@
-list_1 = list()
-with open('input', 'r') as file:
-    list_1 = [[int(x) for x in line.split()] for line in file]
+def read_data():
+    list_1 = list()
+    with open('input', 'r') as file:
+        list_1 = [[int(x) for x in line.split()] for line in file]
+    return list_1
    
 
 def is_safe(row):
@@ -19,6 +21,7 @@ def is_safe(row):
     return True
 
 def part1():
+    list_1 = read_data()
     unsafe = list() # Все небезопасные отчеты
     res = 0 # Сколько отчетов небезопасны
     for row in list_1:
